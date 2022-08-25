@@ -187,8 +187,11 @@ local function ExecuteScript() -- LoadScript.ExecuteScript
     elseif game.PlaceId == 9217366438 then --Test Game 2
         print("Test 2")    
 
+    elseif game.PlaceId == 142823291 then --MM2
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/MM2'))()
+
     else --Universal
-        print("Universal")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/universal'))()
             
     end
         end
@@ -234,13 +237,16 @@ coroutine.wrap(LoadAnimate)()
 local function DetectGame() -- GameText.DetectGame 
     local script = Instance.new('LocalScript', GameText)
 
-    local gametext = "text"
+    local gametext = ""
     
     if game.PlaceId == 9217365103 then --Test Game 1
-        gametext = "Game 1"
+        gametext = "Test Game 1"
     
     elseif game.PlaceId == 9217366438 then --Test Game 2
-        gametext = "Game 2"
+        gametext = "Test Game 2"
+        
+    elseif game.PlaceId == 142823291 then --MM2
+        gametext = "Murder Mystery 2"
         
     else --Universal
         gametext = "Universal Aimbot & ESP"
