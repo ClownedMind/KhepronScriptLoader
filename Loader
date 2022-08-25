@@ -1,0 +1,282 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KhepronScriptLoader = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TopBar = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local Logo = Instance.new("ImageLabel")
+local LoadScript = Instance.new("TextButton")
+local GameText = Instance.new("TextLabel")
+local Settings = Instance.new("Frame")
+local TopBar_2 = Instance.new("Frame")
+local SettingsLabel = Instance.new("TextLabel")
+local InProgress = Instance.new("TextLabel")
+
+--Properties:
+
+KhepronScriptLoader.Name = "KhepronScriptLoader"
+if syn and syn.protect_gui and (not islclosure(syn.protect_gui)) then
+    syn.protect_gui(KhepronScriptLoader)
+    KhepronScriptLoader.Parent = game:GetService("CoreGui")
+        warn("KhepronScriptLoader Parent = syn.protect_gui")
+    elseif gethui then
+        KhepronScriptLoader.Parent = gethui()
+        warn("KhepronScriptLoader Parent = gethui")
+    else
+        KhepronScriptLoader.Parent = game:GetService("CoreGui")
+        warn("KhepronScriptLoader Parent = CoreGui")
+    end
+KhepronScriptLoader.DisplayOrder = 999999999
+
+Main.Name = "Main"
+Main.Parent = KhepronScriptLoader
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Main.BackgroundTransparency = 1.000
+Main.BorderColor3 = Color3.fromRGB(27, 27, 27)
+Main.Position = UDim2.new(0.5, 0, 0.442708343, 0)
+Main.Size = UDim2.new(0, 361, 0, 130)
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Main
+TopBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TopBar.BackgroundTransparency = 1.000
+TopBar.BorderColor3 = Color3.fromRGB(25, 25, 25)
+TopBar.Size = UDim2.new(0, 361, 0, 29)
+
+Close.Name = "Close"
+Close.Parent = TopBar
+Close.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Close.Position = UDim2.new(0.900277019, 0, 0, 0)
+Close.Size = UDim2.new(0, 36, 0, 29)
+Close.Font = Enum.Font.TitilliumWeb
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 28.000
+Close.TextTransparency = 1.000
+
+Logo.Name = "Logo"
+Logo.Parent = TopBar
+Logo.Active = true
+Logo.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Logo.BackgroundTransparency = 1.000
+Logo.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Logo.Size = UDim2.new(0, 28, 0, 29)
+Logo.Image = "http://www.roblox.com/asset/?id=10706479040"
+Logo.ImageTransparency = 1.000
+
+LoadScript.Name = "LoadScript"
+LoadScript.Parent = Main
+LoadScript.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LoadScript.BackgroundTransparency = 1.000
+LoadScript.BorderColor3 = Color3.fromRGB(25, 25, 25)
+LoadScript.Position = UDim2.new(0, 0, 0.779999971, 0)
+LoadScript.Size = UDim2.new(0, 361, 0, 29)
+LoadScript.Font = Enum.Font.TitilliumWeb
+LoadScript.Text = "Load Script"
+LoadScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadScript.TextSize = 28.000
+LoadScript.TextTransparency = 1.000
+
+GameText.Name = "GameText"
+GameText.Parent = Main
+GameText.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+GameText.BackgroundTransparency = 1.000
+GameText.BorderColor3 = Color3.fromRGB(27, 27, 27)
+GameText.Position = UDim2.new(0, 0, 0.353846163, 0)
+GameText.Size = UDim2.new(0, 361, 0, 37)
+GameText.Font = Enum.Font.SourceSans
+GameText.Text = "GameText"
+GameText.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameText.TextScaled = true
+GameText.TextSize = 28.000
+GameText.TextTransparency = 1.000
+GameText.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = Main
+Settings.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Settings.BackgroundTransparency = 1.000
+Settings.BorderColor3 = Color3.fromRGB(27, 27, 27)
+Settings.Position = UDim2.new(1.02493072, 0, 0, 0)
+Settings.Size = UDim2.new(0, 167, 0, 130)
+
+TopBar_2.Name = "TopBar"
+TopBar_2.Parent = Settings
+TopBar_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TopBar_2.BackgroundTransparency = 1.000
+TopBar_2.BorderColor3 = Color3.fromRGB(25, 25, 25)
+TopBar_2.Size = UDim2.new(0, 167, 0, 29)
+
+SettingsLabel.Name = "SettingsLabel"
+SettingsLabel.Parent = TopBar_2
+SettingsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsLabel.BackgroundTransparency = 1.000
+SettingsLabel.Size = UDim2.new(0, 65, 0, 21)
+SettingsLabel.Font = Enum.Font.SourceSans
+SettingsLabel.Text = "Settings"
+SettingsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsLabel.TextScaled = true
+SettingsLabel.TextSize = 14.000
+SettingsLabel.TextTransparency = 1.000
+SettingsLabel.TextWrapped = true
+
+InProgress.Name = "InProgress"
+InProgress.Parent = Settings
+InProgress.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InProgress.BackgroundTransparency = 1.000
+InProgress.Position = UDim2.new(0, 0, 0.353846163, 0)
+InProgress.Size = UDim2.new(0, 167, 0, 50)
+InProgress.Font = Enum.Font.SourceSans
+InProgress.Text = "In Progress"
+InProgress.TextColor3 = Color3.fromRGB(255, 255, 255)
+InProgress.TextSize = 25.000
+InProgress.TextTransparency = 1.000
+InProgress.TextWrapped = true
+
+-- Scripts:
+
+local function CloseAnimate() -- Close.CloseAnimate 
+    local script = Instance.new('LocalScript', Close)
+
+    function OnClicked()
+        function transparent(TransparencyValue)
+            script.Parent.Parent.Parent.Settings.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Parent.Settings.TopBar.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Parent.Settings.TopBar.SettingsLabel.TextTransparency = TransparencyValue
+            script.Parent.Parent.Parent.Settings.InProgress.TextTransparency = TransparencyValue
+            script.Parent.Parent.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Close.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Close.TextTransparency = TransparencyValue
+            script.Parent.Parent.Parent.TopBar.Logo.ImageTransparency = TransparencyValue
+            script.Parent.Parent.Parent.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Parent.GameText.TextTransparency = TransparencyValue
+            script.Parent.Parent.Parent.LoadScript.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Parent.LoadScript.TextTransparency = TransparencyValue
+            wait(0.03)
+        end
+        transparent(0.1)
+        transparent(0.2)
+        transparent(0.3)
+        transparent(0.4)
+        transparent(0.5)
+        transparent(0.6)
+        transparent(0.7)
+        transparent(0.8)
+        transparent(0.9)
+        transparent(1)
+        script.Parent.Parent.Parent.Parent:Destroy()
+    end 
+    script.Parent.MouseButton1Up:connect(OnClicked)
+end
+coroutine.wrap(CloseAnimate)()
+
+local function ExecuteScript() -- LoadScript.ExecuteScript 
+    local script = Instance.new('LocalScript', LoadScript)
+
+    function onClicked()
+    
+    if game.PlaceId == 9217365103 then --Test Game 1
+        print("Test 1")
+    
+    elseif game.PlaceId == 9217366438 then --Test Game 2
+        print("Test 2")    
+
+    else --Universal
+        print("Universal")
+            
+    end
+        end
+    script.Parent.MouseButton1Up:Connect(onClicked)
+end
+coroutine.wrap(ExecuteScript)()
+
+local function LoadAnimate() -- LoadScript.LoadAnimate 
+    local script = Instance.new('LocalScript', LoadScript)
+
+    function OnClicked()
+        function transparent(TransparencyValue)
+            script.Parent.Parent.Settings.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Settings.TopBar.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.Settings.TopBar.SettingsLabel.TextTransparency = TransparencyValue
+            script.Parent.Parent.Settings.InProgress.TextTransparency = TransparencyValue
+            script.Parent.Parent.TopBar.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.TopBar.Close.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.TopBar.Close.TextTransparency = TransparencyValue
+            script.Parent.Parent.TopBar.Logo.ImageTransparency = TransparencyValue
+            script.Parent.Parent.BackgroundTransparency = TransparencyValue
+            script.Parent.Parent.GameText.TextTransparency = TransparencyValue
+            script.Parent.BackgroundTransparency = TransparencyValue
+            script.Parent.TextTransparency = TransparencyValue
+            wait(0.03)
+        end
+        transparent(0.1)
+        transparent(0.2)
+        transparent(0.3)
+        transparent(0.4)
+        transparent(0.5)
+        transparent(0.6)
+        transparent(0.7)
+        transparent(0.8)
+        transparent(0.9)
+        transparent(1)
+        script.Parent.Parent.Parent:Destroy()
+    end 
+    script.Parent.MouseButton1Up:connect(OnClicked)
+end
+coroutine.wrap(LoadAnimate)()
+
+local function DetectGame() -- GameText.DetectGame 
+    local script = Instance.new('LocalScript', GameText)
+
+    local gametext = "text"
+    
+    if game.PlaceId == 9217365103 then --Test Game 1
+        gametext = "Game 1"
+    
+    elseif game.PlaceId == 9217366438 then --Test Game 2
+        gametext = "Game 2"
+        
+    else --Universal
+        gametext = "Universal Aimbot & ESP"
+    end
+    script.Parent.Text = gametext
+end
+coroutine.wrap(DetectGame)()
+
+local function OpenAnimate() -- KhepronScriptLoader.OpenAnimate 
+    local script = Instance.new('LocalScript', KhepronScriptLoader)
+
+    function transparent(TransparencyValue)
+            script.Parent.Main.Settings.BackgroundTransparency = TransparencyValue
+            script.Parent.Main.Settings.TopBar.BackgroundTransparency = TransparencyValue
+            script.Parent.Main.Settings.TopBar.SettingsLabel.TextTransparency = TransparencyValue
+            script.Parent.Main.Settings.InProgress.TextTransparency = TransparencyValue
+            script.Parent.Main.TopBar.BackgroundTransparency = TransparencyValue
+            script.Parent.Main.TopBar.Close.TextTransparency = TransparencyValue
+            script.Parent.Main.TopBar.Close.BackgroundTransparency = TransparencyValue
+            script.Parent.Main.TopBar.Logo.ImageTransparency = TransparencyValue
+            script.Parent.Main.BackgroundTransparency = TransparencyValue
+            script.Parent.Main.GameText.TextTransparency = TransparencyValue
+            script.Parent.Main.LoadScript.TextTransparency = TransparencyValue
+            script.Parent.Main.LoadScript.BackgroundTransparency = TransparencyValue
+            wait(0.03)
+        end
+        transparent(1)
+        transparent(0.9)
+        transparent(0.8)
+        transparent(0.7)
+        transparent(0.6)
+        transparent(0.5)
+        transparent(0.4)
+        transparent(0.3)
+        transparent(0.2)
+        transparent(0.1)
+        transparent(0)
+end
+coroutine.wrap(OpenAnimate)()
