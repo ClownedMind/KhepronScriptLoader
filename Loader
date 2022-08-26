@@ -181,19 +181,43 @@ local function ExecuteScript() -- LoadScript.ExecuteScript
 
     function onClicked()
     
-    if game.PlaceId == 9217365103 then --Test Game 1
-        print("Test 1")
-    
-    elseif game.PlaceId == 9217366438 then --Test Game 2
-        print("Test 2")    
-
-    elseif game.PlaceId == 142823291 then --MM2
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/MM2'))()
-
-    else --Universal
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/universal'))()
-            
-    end
+        if game.PlaceId == 9217365103 then --Test Game 1
+            print("Test 1")
+        
+        elseif game.PlaceId == 9217366438 then --Test Game 2
+            print("Test 2")    
+        
+        elseif game.PlaceId == 2768379856 then --3008
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/3008'))()
+        
+        elseif game.PlaceId == 286090429 then --Arsenal
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Arsenal'))()
+        
+        elseif game.PlaceId == 4282985734 then --Combat Warriors
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/CombatWarriors'))()
+        
+        elseif game.PlaceId == 4588604953 then --Criminality
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Criminality'))()
+        
+        elseif game.PlaceId == 2788229376 then --Da Hood
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/DaHood'))()
+        
+        elseif game.PlaceId == 3625110776 then --Elimination Tower
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EliminationTower'))()
+        
+        elseif game.PlaceId == 2577040780 then --Eviction Notice
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EvictionNotice'))()
+        
+        elseif game.PlaceId == 142823291 then --Murder Mystery 2
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/MurderMystery2'))()
+        
+        elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/TheRakeRemastered'))()
+        
+        else --Universal
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/universal'))()
+                
+        end
         end
     script.Parent.MouseButton1Up:Connect(onClicked)
 end
@@ -239,14 +263,40 @@ local function DetectGame() -- GameText.DetectGame
 
     local gametext = ""
     
+    local gametext = ""
+    
     if game.PlaceId == 9217365103 then --Test Game 1
         gametext = "Test Game 1"
     
     elseif game.PlaceId == 9217366438 then --Test Game 2
         gametext = "Test Game 2"
         
-    elseif game.PlaceId == 142823291 then --MM2
+    elseif game.PlaceId == 2768379856 then --3008
+        gametext = "3008"
+    
+    elseif game.PlaceId == 286090429 then --Arsenal
+        gametext = "Arsenal"
+    
+    elseif game.PlaceId == 4282985734 then --Combat Warriors
+        gametext = "Combat Warriors"
+    
+    elseif game.PlaceId == 4588604953 then --Criminality
+        gametext = "Criminality"
+    
+    elseif game.PlaceId == 2788229376 then --Da Hood
+        gametext = "Da Hood"
+    
+    elseif game.PlaceId == 3625110776 then --Elimination Tower
+        gametext = "Elimination Tower"
+    
+    elseif game.PlaceId == 2577040780 then --Eviction Notice
+        gametext = "Eviction Notice"
+    
+    elseif game.PlaceId == 142823291 then --Murder Mystery 2
         gametext = "Murder Mystery 2"
+    
+    elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+        gametext = "The Rake REMASTERED"
         
     else --Universal
         gametext = "Universal Aimbot & ESP"
