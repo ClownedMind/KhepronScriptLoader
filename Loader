@@ -8,12 +8,24 @@ local Main = Instance.new("Frame")
 local TopBar = Instance.new("Frame")
 local Close = Instance.new("TextButton")
 local Logo = Instance.new("ImageLabel")
+local Version = Instance.new("TextLabel")
 local LoadScript = Instance.new("TextButton")
 local GameText = Instance.new("TextLabel")
-local Settings = Instance.new("Frame")
+local SupportedGames = Instance.new("Frame")
 local TopBar_2 = Instance.new("Frame")
-local SettingsLabel = Instance.new("TextLabel")
-local InProgress = Instance.new("TextLabel")
+local SupportedGamesLabel = Instance.new("TextLabel")
+local GamesHolder = Instance.new("ScrollingFrame")
+local Games = Instance.new("TextLabel")
+local Info = Instance.new("Frame")
+local TopBar_3 = Instance.new("Frame")
+local InformationLabel = Instance.new("TextLabel")
+local Discord = Instance.new("Frame")
+local DiscordLabel = Instance.new("TextLabel")
+local DiscordInfo = Instance.new("TextLabel")
+local CopyInvite = Instance.new("TextButton")
+local Credits = Instance.new("Frame")
+local CreditsLabel = Instance.new("TextLabel")
+local Credits_2 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -35,15 +47,13 @@ Main.Name = "Main"
 Main.Parent = KhepronScriptLoader
 Main.AnchorPoint = Vector2.new(0.5, 0.5)
 Main.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-Main.BackgroundTransparency = 1.000
 Main.BorderColor3 = Color3.fromRGB(27, 27, 27)
-Main.Position = UDim2.new(0.5, 0, 0.442708343, 0)
-Main.Size = UDim2.new(0, 361, 0, 130)
+Main.Position = UDim2.new(0.470772415, 0, 0.383333325, 0)
+Main.Size = UDim2.new(0, 361, 0, 197)
 
 TopBar.Name = "TopBar"
 TopBar.Parent = Main
 TopBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-TopBar.BackgroundTransparency = 1.000
 TopBar.BorderColor3 = Color3.fromRGB(25, 25, 25)
 TopBar.Size = UDim2.new(0, 361, 0, 29)
 
@@ -58,7 +68,6 @@ Close.Font = Enum.Font.TitilliumWeb
 Close.Text = "X"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 28.000
-Close.TextTransparency = 1.000
 
 Logo.Name = "Logo"
 Logo.Parent = TopBar
@@ -68,20 +77,31 @@ Logo.BackgroundTransparency = 1.000
 Logo.BorderColor3 = Color3.fromRGB(25, 25, 25)
 Logo.Size = UDim2.new(0, 28, 0, 29)
 Logo.Image = "http://www.roblox.com/asset/?id=10706479040"
-Logo.ImageTransparency = 1.000
+
+Version.Name = "Version"
+Version.Parent = TopBar
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Version.BorderSizePixel = 0
+Version.Position = UDim2.new(0.0775623247, 0, 0, 0)
+Version.Size = UDim2.new(0, 297, 0, 29)
+Version.Font = Enum.Font.SourceSans
+Version.Text = "Khepron Script Loader V0.3"
+Version.TextColor3 = Color3.fromRGB(255, 255, 255)
+Version.TextSize = 23.000
+Version.TextYAlignment = Enum.TextYAlignment.Top
 
 LoadScript.Name = "LoadScript"
 LoadScript.Parent = Main
 LoadScript.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-LoadScript.BackgroundTransparency = 1.000
 LoadScript.BorderColor3 = Color3.fromRGB(25, 25, 25)
-LoadScript.Position = UDim2.new(0, 0, 0.779999971, 0)
-LoadScript.Size = UDim2.new(0, 361, 0, 29)
+LoadScript.Position = UDim2.new(0, 0, 0.668324828, 0)
+LoadScript.Size = UDim2.new(0, 361, 0, 36)
 LoadScript.Font = Enum.Font.TitilliumWeb
 LoadScript.Text = "Load Script"
 LoadScript.TextColor3 = Color3.fromRGB(255, 255, 255)
-LoadScript.TextSize = 28.000
-LoadScript.TextTransparency = 1.000
+LoadScript.TextSize = 25.000
 
 GameText.Name = "GameText"
 GameText.Parent = Main
@@ -95,244 +115,418 @@ GameText.Text = "GameText"
 GameText.TextColor3 = Color3.fromRGB(255, 255, 255)
 GameText.TextScaled = true
 GameText.TextSize = 28.000
-GameText.TextTransparency = 1.000
 GameText.TextWrapped = true
 
-Settings.Name = "Settings"
-Settings.Parent = Main
-Settings.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-Settings.BackgroundTransparency = 1.000
-Settings.BorderColor3 = Color3.fromRGB(27, 27, 27)
-Settings.Position = UDim2.new(1.02493072, 0, 0, 0)
-Settings.Size = UDim2.new(0, 167, 0, 130)
+SupportedGames.Name = "SupportedGames"
+SupportedGames.Parent = Main
+SupportedGames.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+SupportedGames.BorderColor3 = Color3.fromRGB(27, 27, 27)
+SupportedGames.Position = UDim2.new(1.02493072, 0, 0, 0)
+SupportedGames.Size = UDim2.new(0, 167, 0, 355)
 
 TopBar_2.Name = "TopBar"
-TopBar_2.Parent = Settings
+TopBar_2.Parent = SupportedGames
 TopBar_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-TopBar_2.BackgroundTransparency = 1.000
 TopBar_2.BorderColor3 = Color3.fromRGB(25, 25, 25)
 TopBar_2.Size = UDim2.new(0, 167, 0, 29)
 
-SettingsLabel.Name = "SettingsLabel"
-SettingsLabel.Parent = TopBar_2
-SettingsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SettingsLabel.BackgroundTransparency = 1.000
-SettingsLabel.Size = UDim2.new(0, 65, 0, 21)
-SettingsLabel.Font = Enum.Font.SourceSans
-SettingsLabel.Text = "Settings"
-SettingsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-SettingsLabel.TextScaled = true
-SettingsLabel.TextSize = 14.000
-SettingsLabel.TextTransparency = 1.000
-SettingsLabel.TextWrapped = true
+SupportedGamesLabel.Name = "SupportedGamesLabel"
+SupportedGamesLabel.Parent = TopBar_2
+SupportedGamesLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SupportedGamesLabel.BackgroundTransparency = 1.000
+SupportedGamesLabel.Size = UDim2.new(0, 167, 0, 29)
+SupportedGamesLabel.Font = Enum.Font.SourceSans
+SupportedGamesLabel.Text = "Supported Games"
+SupportedGamesLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+SupportedGamesLabel.TextSize = 19.000
+SupportedGamesLabel.TextWrapped = true
 
-InProgress.Name = "InProgress"
-InProgress.Parent = Settings
-InProgress.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InProgress.BackgroundTransparency = 1.000
-InProgress.Position = UDim2.new(0, 0, 0.353846163, 0)
-InProgress.Size = UDim2.new(0, 167, 0, 50)
-InProgress.Font = Enum.Font.SourceSans
-InProgress.Text = "In Progress"
-InProgress.TextColor3 = Color3.fromRGB(255, 255, 255)
-InProgress.TextSize = 25.000
-InProgress.TextTransparency = 1.000
-InProgress.TextWrapped = true
+GamesHolder.Name = "GamesHolder"
+GamesHolder.Parent = TopBar_2
+GamesHolder.Active = true
+GamesHolder.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+GamesHolder.BorderColor3 = Color3.fromRGB(27, 27, 27)
+GamesHolder.BorderSizePixel = 0
+GamesHolder.Position = UDim2.new(0, 0, 1, 0)
+GamesHolder.Size = UDim2.new(0, 167, 0, 326)
+GamesHolder.BottomImage = ""
+GamesHolder.CanvasSize = UDim2.new(0, 0, 10, 0)
+GamesHolder.ScrollBarThickness = 8
+GamesHolder.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+Games.Name = "Games"
+Games.Parent = GamesHolder
+Games.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Games.BackgroundTransparency = 1.000
+Games.BorderColor3 = Color3.fromRGB(27, 27, 27)
+Games.Position = UDim2.new(0.0359281451, 0, 0.020477809, 0)
+Games.Size = UDim2.new(0, 155, 0, 319)
+Games.Font = Enum.Font.TitilliumWeb
+Games.Text = "•3008                                                                 •Arsenal                                                            •Combat Warriors                                                                                            •Criminality                                                                                 •Da Hood                                                                              •Elimination Tower                                                                                      •Eviction Notice                                                                                  •Murder Mystery 2                                                                                  •Project Lazarus                                                            •The Rake Remastered                                  •Uno                                                                   •Universal"
+Games.TextColor3 = Color3.fromRGB(255, 255, 255)
+Games.TextSize = 21.000
+Games.TextWrapped = true
+Games.TextXAlignment = Enum.TextXAlignment.Left
+Games.TextYAlignment = Enum.TextYAlignment.Top
+
+Info.Name = "Info"
+Info.Parent = Main
+Info.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Info.Position = UDim2.new(0, 0, 1.06091368, 0)
+Info.Size = UDim2.new(0, 361, 0, 146)
+
+TopBar_3.Name = "TopBar"
+TopBar_3.Parent = Info
+TopBar_3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TopBar_3.BorderColor3 = Color3.fromRGB(25, 25, 25)
+TopBar_3.Size = UDim2.new(0, 361, 0, 30)
+
+InformationLabel.Name = "InformationLabel"
+InformationLabel.Parent = TopBar_3
+InformationLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InformationLabel.BackgroundTransparency = 1.000
+InformationLabel.Size = UDim2.new(0, 361, 0, 30)
+InformationLabel.Font = Enum.Font.SourceSans
+InformationLabel.Text = "Information"
+InformationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+InformationLabel.TextSize = 25.000
+InformationLabel.TextWrapped = true
+
+Discord.Name = "Discord"
+Discord.Parent = TopBar_3
+Discord.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Discord.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Discord.Position = UDim2.new(0, 0, 1.29999995, 0)
+Discord.Size = UDim2.new(0, 172, 0, 97)
+
+DiscordLabel.Name = "DiscordLabel"
+DiscordLabel.Parent = Discord
+DiscordLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLabel.BackgroundTransparency = 1.000
+DiscordLabel.Size = UDim2.new(0, 172, 0, 23)
+DiscordLabel.Font = Enum.Font.SourceSans
+DiscordLabel.Text = "Discord"
+DiscordLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLabel.TextSize = 14.000
+
+DiscordInfo.Name = "DiscordInfo"
+DiscordInfo.Parent = Discord
+DiscordInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordInfo.BackgroundTransparency = 1.000
+DiscordInfo.Position = UDim2.new(0, 0, 0.29896906, 0)
+DiscordInfo.Size = UDim2.new(0, 172, 0, 68)
+DiscordInfo.Font = Enum.Font.SourceSans
+DiscordInfo.Text = "Click To Copy Discord Invite!"
+DiscordInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordInfo.TextSize = 19.000
+DiscordInfo.TextWrapped = true
+DiscordInfo.TextYAlignment = Enum.TextYAlignment.Top
+
+CopyInvite.Name = "CopyInvite"
+CopyInvite.Parent = Discord
+CopyInvite.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+CopyInvite.BorderColor3 = Color3.fromRGB(27, 27, 27)
+CopyInvite.Position = UDim2.new(0.0755813941, 0, 0.762886584, 0)
+CopyInvite.Size = UDim2.new(0, 147, 0, 23)
+CopyInvite.Font = Enum.Font.SourceSans
+CopyInvite.Text = "Copy Invite"
+CopyInvite.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyInvite.TextSize = 14.000
+
+Credits.Name = "Credits"
+Credits.Parent = TopBar_3
+Credits.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Credits.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Credits.Position = UDim2.new(0.523545742, 0, 1.29999995, 0)
+Credits.Size = UDim2.new(0, 172, 0, 97)
+
+CreditsLabel.Name = "CreditsLabel"
+CreditsLabel.Parent = Credits
+CreditsLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel.BackgroundTransparency = 1.000
+CreditsLabel.Size = UDim2.new(0, 172, 0, 23)
+CreditsLabel.Font = Enum.Font.SourceSans
+CreditsLabel.Text = "Credits"
+CreditsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel.TextSize = 14.000
+
+Credits_2.Name = "Credits"
+Credits_2.Parent = Credits
+Credits_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits_2.BackgroundTransparency = 1.000
+Credits_2.Position = UDim2.new(0.0639534891, 0, 0.29896906, 0)
+Credits_2.Size = UDim2.new(0, 125, 0, 62)
+Credits_2.Font = Enum.Font.SourceSans
+Credits_2.Text = "•Chili                                                                                   •ClownedMind"
+Credits_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits_2.TextSize = 19.000
+Credits_2.TextWrapped = true
+Credits_2.TextXAlignment = Enum.TextXAlignment.Left
+Credits_2.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
-local function CloseAnimate() -- Close.CloseAnimate 
-    local script = Instance.new('LocalScript', Close)
+local function QWRXL_fake_script() -- KhepronScriptLoader.OpenAnimate 
+	local script = Instance.new('LocalScript', KhepronScriptLoader)
 
-    function OnClicked()
-        function transparent(TransparencyValue)
-            script.Parent.Parent.Parent.Settings.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Parent.Settings.TopBar.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Parent.Settings.TopBar.SettingsLabel.TextTransparency = TransparencyValue
-            script.Parent.Parent.Parent.Settings.InProgress.TextTransparency = TransparencyValue
-            script.Parent.Parent.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Close.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Close.TextTransparency = TransparencyValue
-            script.Parent.Parent.Parent.TopBar.Logo.ImageTransparency = TransparencyValue
-            script.Parent.Parent.Parent.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Parent.GameText.TextTransparency = TransparencyValue
-            script.Parent.Parent.Parent.LoadScript.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Parent.LoadScript.TextTransparency = TransparencyValue
-            wait(0.03)
-        end
-        transparent(0.1)
-        transparent(0.2)
-        transparent(0.3)
-        transparent(0.4)
-        transparent(0.5)
-        transparent(0.6)
-        transparent(0.7)
-        transparent(0.8)
-        transparent(0.9)
-        transparent(1)
-        script.Parent.Parent.Parent.Parent:Destroy()
-    end 
-    script.Parent.MouseButton1Up:connect(OnClicked)
+	function transparent(TransparencyValue)
+		--Main
+		script.Parent.Main.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.TopBar.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.TopBar.Version.TextTransparency = TransparencyValue
+		script.Parent.Main.TopBar.Close.TextTransparency = TransparencyValue
+		script.Parent.Main.TopBar.Close.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.TopBar.Logo.ImageTransparency = TransparencyValue
+		script.Parent.Main.LoadScript.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.LoadScript.TextTransparency = TransparencyValue
+		script.Parent.Main.GameText.TextTransparency = TransparencyValue
+		--SupportedGames
+		script.Parent.Main.SupportedGames.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.SupportedGames.TopBar.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.SupportedGames.TopBar.GamesHolder.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.SupportedGames.TopBar.GamesHolder.Games.TextTransparency = TransparencyValue
+		script.Parent.Main.SupportedGames.TopBar.SupportedGamesLabel.TextTransparency = TransparencyValue
+		--Info
+		script.Parent.Main.Info.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.InformationLabel.TextTransparency = TransparencyValue
+		--Info -Discord
+		script.Parent.Main.Info.TopBar.Discord.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.Discord.CopyInvite.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.Discord.CopyInvite.TextTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.Discord.DiscordInfo.TextTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.Discord.DiscordLabel.TextTransparency = TransparencyValue
+		--Info -Credits
+		script.Parent.Main.Info.TopBar.Credits.BackgroundTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.Credits.CreditsLabel.TextTransparency = TransparencyValue
+		script.Parent.Main.Info.TopBar.Credits.Credits.TextTransparency = TransparencyValue
+		wait(0.03)
+		end
+		transparent(1)
+		transparent(0.9)
+		transparent(0.8)
+		transparent(0.7)
+		transparent(0.6)
+		transparent(0.5)
+		transparent(0.4)
+		transparent(0.3)
+		transparent(0.2)
+		transparent(0.1)
+		transparent(0)
 end
-coroutine.wrap(CloseAnimate)()
+coroutine.wrap(QWRXL_fake_script)()
+local function QGWP_fake_script() -- KhepronScriptLoader.LoadAnimate 
+	local script = Instance.new('LocalScript', KhepronScriptLoader)
 
-local function ExecuteScript() -- LoadScript.ExecuteScript 
-    local script = Instance.new('LocalScript', LoadScript)
-
-    function onClicked()
-    
-        if game.PlaceId == 9217365103 then --Test Game 1
-            print("Test 1")
-        
-        elseif game.PlaceId == 9217366438 then --Test Game 2
-            print("Test 2")    
-        
-        elseif game.PlaceId == 2768379856 then --3008
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/3008'))()
-        
-        elseif game.PlaceId == 286090429 then --Arsenal
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Arsenal'))()
-        
-        elseif game.PlaceId == 4282985734 then --Combat Warriors
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/CombatWarriors'))()
-        
-        elseif game.PlaceId == 4588604953 then --Criminality
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Criminality'))()
-        
-        elseif game.PlaceId == 2788229376 then --Da Hood
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/DaHood'))()
-        
-        elseif game.PlaceId == 3625110776 then --Elimination Tower
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EliminationTower'))()
-        
-        elseif game.PlaceId == 2577040780 then --Eviction Notice
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EvictionNotice'))()
-        
-        elseif game.PlaceId == 142823291 then --Murder Mystery 2
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/MurderMystery2'))()
-        
-        elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/TheRakeRemastered'))()
-        
-        else --Universal
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/universal'))()
-                
-        end
-        end
-    script.Parent.MouseButton1Up:Connect(onClicked)
+	function OnClicked()
+		function transparent(TransparencyValue)
+			--Main
+			script.Parent.Main.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.TopBar.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Version.TextTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Close.TextTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Close.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Logo.ImageTransparency = TransparencyValue
+			script.Parent.Main.LoadScript.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.LoadScript.TextTransparency = TransparencyValue
+			script.Parent.Main.GameText.TextTransparency = TransparencyValue
+			--SupportedGames
+			script.Parent.Main.SupportedGames.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.GamesHolder.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.GamesHolder.Games.TextTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.SupportedGamesLabel.TextTransparency = TransparencyValue
+			--Info
+			script.Parent.Main.Info.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.InformationLabel.TextTransparency = TransparencyValue
+			--Info -Discord
+			script.Parent.Main.Info.TopBar.Discord.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.CopyInvite.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.CopyInvite.TextTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.DiscordInfo.TextTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.DiscordLabel.TextTransparency = TransparencyValue
+			--Info -Credits
+			script.Parent.Main.Info.TopBar.Credits.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Credits.CreditsLabel.TextTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Credits.Credits.TextTransparency = TransparencyValue
+			wait(0.03)
+		end
+		transparent(0.1)
+		transparent(0.2)
+		transparent(0.3)
+		transparent(0.4)
+		transparent(0.5)
+		transparent(0.6)
+		transparent(0.7)
+		transparent(0.8)
+		transparent(0.9)
+		transparent(1)
+		script.Parent:Destroy()
+	end 
+	script.Parent.Main.LoadScript.MouseButton1Up:Connect(OnClicked)
 end
-coroutine.wrap(ExecuteScript)()
+coroutine.wrap(QGWP_fake_script)()
+local function GSXHZ_fake_script() -- KhepronScriptLoader.CloseAnimate 
+	local script = Instance.new('LocalScript', KhepronScriptLoader)
 
-local function LoadAnimate() -- LoadScript.LoadAnimate 
-    local script = Instance.new('LocalScript', LoadScript)
-
-    function OnClicked()
-        function transparent(TransparencyValue)
-            script.Parent.Parent.Settings.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Settings.TopBar.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.Settings.TopBar.SettingsLabel.TextTransparency = TransparencyValue
-            script.Parent.Parent.Settings.InProgress.TextTransparency = TransparencyValue
-            script.Parent.Parent.TopBar.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.TopBar.Close.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.TopBar.Close.TextTransparency = TransparencyValue
-            script.Parent.Parent.TopBar.Logo.ImageTransparency = TransparencyValue
-            script.Parent.Parent.BackgroundTransparency = TransparencyValue
-            script.Parent.Parent.GameText.TextTransparency = TransparencyValue
-            script.Parent.BackgroundTransparency = TransparencyValue
-            script.Parent.TextTransparency = TransparencyValue
-            wait(0.03)
-        end
-        transparent(0.1)
-        transparent(0.2)
-        transparent(0.3)
-        transparent(0.4)
-        transparent(0.5)
-        transparent(0.6)
-        transparent(0.7)
-        transparent(0.8)
-        transparent(0.9)
-        transparent(1)
-        script.Parent.Parent.Parent:Destroy()
-    end 
-    script.Parent.MouseButton1Up:connect(OnClicked)
+	function OnClicked()
+		function transparent(TransparencyValue)
+			--Main
+			script.Parent.Main.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.TopBar.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Version.TextTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Close.TextTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Close.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.TopBar.Logo.ImageTransparency = TransparencyValue
+			script.Parent.Main.LoadScript.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.LoadScript.TextTransparency = TransparencyValue
+			script.Parent.Main.GameText.TextTransparency = TransparencyValue
+			--SupportedGames
+			script.Parent.Main.SupportedGames.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.GamesHolder.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.GamesHolder.Games.TextTransparency = TransparencyValue
+			script.Parent.Main.SupportedGames.TopBar.SupportedGamesLabel.TextTransparency = TransparencyValue
+			--Info
+			script.Parent.Main.Info.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.InformationLabel.TextTransparency = TransparencyValue
+			--Info -Discord
+			script.Parent.Main.Info.TopBar.Discord.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.CopyInvite.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.CopyInvite.TextTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.DiscordInfo.TextTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Discord.DiscordLabel.TextTransparency = TransparencyValue
+			--Info -Credits
+			script.Parent.Main.Info.TopBar.Credits.BackgroundTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Credits.CreditsLabel.TextTransparency = TransparencyValue
+			script.Parent.Main.Info.TopBar.Credits.Credits.TextTransparency = TransparencyValue
+			wait(0.03)
+		end
+		transparent(0.1)
+		transparent(0.2)
+		transparent(0.3)
+		transparent(0.4)
+		transparent(0.5)
+		transparent(0.6)
+		transparent(0.7)
+		transparent(0.8)
+		transparent(0.9)
+		transparent(1)
+		script.Parent:Destroy()
+	end 
+	script.Parent.Main.TopBar.Close.MouseButton1Up:Connect(OnClicked)
 end
-coroutine.wrap(LoadAnimate)()
+coroutine.wrap(GSXHZ_fake_script)()
+local function HBGU_fake_script() -- KhepronScriptLoader.ExecuteScript 
+	local script = Instance.new('LocalScript', KhepronScriptLoader)
 
-local function DetectGame() -- GameText.DetectGame 
-    local script = Instance.new('LocalScript', GameText)
-
-    local gametext = ""
-    
-    local gametext = ""
-    
-    if game.PlaceId == 9217365103 then --Test Game 1
-        gametext = "Test Game 1"
-    
-    elseif game.PlaceId == 9217366438 then --Test Game 2
-        gametext = "Test Game 2"
-        
-    elseif game.PlaceId == 2768379856 then --3008
-        gametext = "3008"
-    
-    elseif game.PlaceId == 286090429 then --Arsenal
-        gametext = "Arsenal"
-    
-    elseif game.PlaceId == 4282985734 then --Combat Warriors
-        gametext = "Combat Warriors"
-    
-    elseif game.PlaceId == 4588604953 then --Criminality
-        gametext = "Criminality"
-    
-    elseif game.PlaceId == 2788229376 then --Da Hood
-        gametext = "Da Hood"
-    
-    elseif game.PlaceId == 3625110776 then --Elimination Tower
-        gametext = "Elimination Tower"
-    
-    elseif game.PlaceId == 2577040780 then --Eviction Notice
-        gametext = "Eviction Notice"
-    
-    elseif game.PlaceId == 142823291 then --Murder Mystery 2
-        gametext = "Murder Mystery 2"
-    
-    elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
-        gametext = "The Rake REMASTERED"
-        
-    else --Universal
-        gametext = "Universal Aimbot & ESP"
-    end
-    script.Parent.Text = gametext
+	function OnClicked()
+	
+		if game.PlaceId == 9217365103 then --Test Game 1
+			print("Test 1")
+	
+		elseif game.PlaceId == 9217366438 then --Test Game 2
+			print("Test 2")    
+	
+		elseif game.PlaceId == 2768379856 then --3008
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/3008'))()
+	
+		elseif game.PlaceId == 286090429 then --Arsenal
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Arsenal'))()
+	
+		elseif game.PlaceId == 4282985734 then --Combat Warriors
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/CombatWarriors'))()
+	
+		elseif game.PlaceId == 4588604953 then --Criminality
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Criminality'))()
+	
+		elseif game.PlaceId == 2788229376 then --Da Hood
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/DaHood'))()
+	
+		elseif game.PlaceId == 3625110776 then --Elimination Tower
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EliminationTower'))()
+	
+		elseif game.PlaceId == 2577040780 then --Eviction Notice
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EvictionNotice'))()
+	
+		elseif game.PlaceId == 142823291 then --Murder Mystery 2
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/MurderMystery2'))()
+			
+		elseif game.PlaceId == 443406476 then --Project Lazarus
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/ProjectLazarus'))()
+	
+		elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/TheRakeRemastered'))()
+			
+		elseif game.PlaceId == 1689414409 then --Uno
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Uno'))()
+			
+		else --Universal
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/universal'))()
+	
+		end
+	end
+	script.Parent.Main.LoadScript.MouseButton1Up:Connect(OnClicked)
 end
-coroutine.wrap(DetectGame)()
+coroutine.wrap(HBGU_fake_script)()
+local function XKUSRL_fake_script() -- KhepronScriptLoader.DetectGame 
+	local script = Instance.new('LocalScript', KhepronScriptLoader)
 
-local function OpenAnimate() -- KhepronScriptLoader.OpenAnimate 
-    local script = Instance.new('LocalScript', KhepronScriptLoader)
-
-    function transparent(TransparencyValue)
-            script.Parent.Main.Settings.BackgroundTransparency = TransparencyValue
-            script.Parent.Main.Settings.TopBar.BackgroundTransparency = TransparencyValue
-            script.Parent.Main.Settings.TopBar.SettingsLabel.TextTransparency = TransparencyValue
-            script.Parent.Main.Settings.InProgress.TextTransparency = TransparencyValue
-            script.Parent.Main.TopBar.BackgroundTransparency = TransparencyValue
-            script.Parent.Main.TopBar.Close.TextTransparency = TransparencyValue
-            script.Parent.Main.TopBar.Close.BackgroundTransparency = TransparencyValue
-            script.Parent.Main.TopBar.Logo.ImageTransparency = TransparencyValue
-            script.Parent.Main.BackgroundTransparency = TransparencyValue
-            script.Parent.Main.GameText.TextTransparency = TransparencyValue
-            script.Parent.Main.LoadScript.TextTransparency = TransparencyValue
-            script.Parent.Main.LoadScript.BackgroundTransparency = TransparencyValue
-            wait(0.03)
-        end
-        transparent(1)
-        transparent(0.9)
-        transparent(0.8)
-        transparent(0.7)
-        transparent(0.6)
-        transparent(0.5)
-        transparent(0.4)
-        transparent(0.3)
-        transparent(0.2)
-        transparent(0.1)
-        transparent(0)
+	local gametext = ""
+	
+	if game.PlaceId == 9217365103 then --Test Game 1
+		gametext = "Test Game 1"
+	
+	elseif game.PlaceId == 9217366438 then --Test Game 2
+		gametext = "Test Game 2"
+	
+	elseif game.PlaceId == 2768379856 then --3008
+		gametext = "3008"
+	
+	elseif game.PlaceId == 286090429 then --Arsenal
+		gametext = "Arsenal"
+	
+	elseif game.PlaceId == 4282985734 then --Combat Warriors
+		gametext = "Combat Warriors"
+	
+	elseif game.PlaceId == 4588604953 then --Criminality
+		gametext = "Criminality"
+	
+	elseif game.PlaceId == 2788229376 then --Da Hood
+		gametext = "Da Hood"
+	
+	elseif game.PlaceId == 3625110776 then --Elimination Tower
+		gametext = "Elimination Tower"
+	
+	elseif game.PlaceId == 2577040780 then --Eviction Notice
+		gametext = "Eviction Notice"
+	
+	elseif game.PlaceId == 142823291 then --Murder Mystery 2
+		gametext = "Murder Mystery 2"
+		
+	elseif game.PlaceId == 443406476 then --Project Lazarus
+		gametext = "Projet Lazarus"
+	
+	elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+		gametext = "The Rake REMASTERED"
+		
+	elseif game.PlaceId == 1689414409 then --Uno
+		gametext = "Uno"
+	
+	else --Universal
+		gametext = "Universal Aimbot & ESP"
+	end
+	script.Parent.Main.GameText.Text = gametext
 end
-coroutine.wrap(OpenAnimate)()
+coroutine.wrap(XKUSRL_fake_script)()
+local function BRESF_fake_script() -- KhepronScriptLoader.CopyInvite 
+	local script = Instance.new('LocalScript', KhepronScriptLoader)
+
+	function OnClick()
+		setclipboard("https://discord.gg/EAMduRDThK")
+	end
+	script.Parent.Main.Info.TopBar.Discord.CopyInvite.MouseButton1Up:Connect(OnClick)
+end
+coroutine.wrap(BRESF_fake_script)()
