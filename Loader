@@ -162,7 +162,7 @@ Games.BorderColor3 = Color3.fromRGB(27, 27, 27)
 Games.Position = UDim2.new(0.0359281451, 0, 0.020477809, 0)
 Games.Size = UDim2.new(0, 155, 0, 319)
 Games.Font = Enum.Font.TitilliumWeb
-Games.Text = "•3008                                                                 •Arsenal                                                            •Combat Warriors                                                                                            •Criminality                                                                                 •Da Hood                                                                              •Elimination Tower                                                                                      •Eviction Notice                                                                                  •Murder Mystery 2                                                                                  •Project Lazarus                                                            •The Rake Remastered                                      •Uno                                                                   •Universal"
+Games.Text = "•3008                                                                                      •Arsenal                                                 •Bad Business                          •Combat Warriors                                                                                            •Criminality                                                                                 •Da Hood                                                                              •Elimination Tower                                                                                      •Eviction Notice                                                                                  •Murder Mystery 2                                                                                  •Project Lazarus                     •Strucid                                            •The Rake Remastered                                  •Uno                                                                   •Universal"
 Games.TextColor3 = Color3.fromRGB(255, 255, 255)
 Games.TextSize = 21.000
 Games.TextWrapped = true
@@ -226,7 +226,7 @@ CopyInvite.Name = "CopyInvite"
 CopyInvite.Parent = Discord
 CopyInvite.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 CopyInvite.BorderColor3 = Color3.fromRGB(27, 27, 27)
-CopyInvite.Position = UDim2.new(0.0755813941, 0, 0.732886584, 0)
+CopyInvite.Position = UDim2.new(0.0700000003, 0, 0.730000019, 0)
 CopyInvite.Size = UDim2.new(0, 147, 0, 23)
 CopyInvite.Font = Enum.Font.SourceSans
 CopyInvite.Text = "Copy Invite"
@@ -266,7 +266,7 @@ Credits_2.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
-local function QWRXL_fake_script() -- KhepronScriptLoader.OpenAnimate 
+local function PCTOVDR_fake_script() -- KhepronScriptLoader.OpenAnimate 
     local script = Instance.new('LocalScript', KhepronScriptLoader)
 
     function transparent(TransparencyValue)
@@ -314,8 +314,8 @@ local function QWRXL_fake_script() -- KhepronScriptLoader.OpenAnimate
         transparent(0.1)
         transparent(0)
 end
-coroutine.wrap(QWRXL_fake_script)()
-local function QGWP_fake_script() -- KhepronScriptLoader.LoadAnimate 
+coroutine.wrap(PCTOVDR_fake_script)()
+local function FJCYAW_fake_script() -- KhepronScriptLoader.LoadAnimate 
     local script = Instance.new('LocalScript', KhepronScriptLoader)
 
     function OnClicked()
@@ -366,8 +366,8 @@ local function QGWP_fake_script() -- KhepronScriptLoader.LoadAnimate
     end 
     script.Parent.Main.LoadScript.MouseButton1Up:Connect(OnClicked)
 end
-coroutine.wrap(QGWP_fake_script)()
-local function GSXHZ_fake_script() -- KhepronScriptLoader.CloseAnimate 
+coroutine.wrap(FJCYAW_fake_script)()
+local function TZORQ_fake_script() -- KhepronScriptLoader.CloseAnimate 
     local script = Instance.new('LocalScript', KhepronScriptLoader)
 
     function OnClicked()
@@ -418,110 +418,77 @@ local function GSXHZ_fake_script() -- KhepronScriptLoader.CloseAnimate
     end 
     script.Parent.Main.TopBar.Close.MouseButton1Up:Connect(OnClicked)
 end
-coroutine.wrap(GSXHZ_fake_script)()
-local function HBGU_fake_script() -- KhepronScriptLoader.ExecuteScript 
+coroutine.wrap(TZORQ_fake_script)()
+local function QJACO_fake_script() -- KhepronScriptLoader.ExecuteScript 
     local script = Instance.new('LocalScript', KhepronScriptLoader)
 
     function OnClicked()
-    
-        if game.PlaceId == 9217365103 then --Test Game 1
-            print("Test 1")
-    
-        elseif game.PlaceId == 9217366438 then --Test Game 2
-            print("Test 2")    
-    
-        elseif game.PlaceId == 2768379856 then --3008
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/3008'))()
-    
-        elseif game.PlaceId == 286090429 then --Arsenal
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Arsenal'))()
-    
-        elseif game.PlaceId == 4282985734 then --Combat Warriors
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/CombatWarriors'))()
-    
-        elseif game.PlaceId == 4588604953 then --Criminality
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Criminality'))()
-    
-        elseif game.PlaceId == 2788229376 then --Da Hood
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/DaHood'))()
-    
-        elseif game.PlaceId == 3625110776 then --Elimination Tower
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EliminationTower'))()
-    
-        elseif game.PlaceId == 2577040780 then --Eviction Notice
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/EvictionNotice'))()
-    
-        elseif game.PlaceId == 142823291 then --Murder Mystery 2
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/MurderMystery2'))()
-            
-        elseif game.PlaceId == 443406476 then --Project Lazarus
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/ProjectLazarus'))()
-    
-        elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/TheRakeRemastered'))()
-            
-        elseif game.PlaceId == 1689414409 then --Uno
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Uno'))()
-            
-        else --Universal
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/universal'))()
-    
+        wait(0.8)
+        if game.PlaceId == 2768379856 or 286090429 or 3233893879 or 4282985734 or 4588604953 or 2788229376 or 3625110776 or 2577040780 or 142823291 or 443406476 or 2377868063 or 2413927524 or 1689414409 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/".. game.PlaceId ..""))()
+        else
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Universal"))()
         end
     end
     script.Parent.Main.LoadScript.MouseButton1Up:Connect(OnClicked)
 end
-coroutine.wrap(HBGU_fake_script)()
-local function XKUSRL_fake_script() -- KhepronScriptLoader.DetectGame 
+coroutine.wrap(QJACO_fake_script)()
+local function ZWZYQTR_fake_script() -- KhepronScriptLoader.DetectGame 
     local script = Instance.new('LocalScript', KhepronScriptLoader)
-
     local gametext = ""
+
+if game.PlaceId == 9217365103 then --Test Game 1
+    gametext = "Test Game 1"
+
+elseif game.PlaceId == 9217366438 then --Test Game 2
+    gametext = "Test Game 2"
+
+elseif game.PlaceId == 2768379856 then --3008
+    gametext = "3008"
+
+elseif game.PlaceId == 286090429 then --Arsenal
+    gametext = "Arsenal"
     
-    if game.PlaceId == 9217365103 then --Test Game 1
-        gametext = "Test Game 1"
+elseif game.PlaceId == 3233893879 then --Bad Business
+    gametext = "Bad Business"
+
+elseif game.PlaceId == 4282985734 then --Combat Warriors
+    gametext = "Combat Warriors"
+
+elseif game.PlaceId == 4588604953 then --Criminality
+    gametext = "Criminality"
+
+elseif game.PlaceId == 2788229376 then --Da Hood
+    gametext = "Da Hood"
+
+elseif game.PlaceId == 3625110776 then --Elimination Tower
+    gametext = "Elimination Tower"
+
+elseif game.PlaceId == 2577040780 then --Eviction Notice
+    gametext = "Eviction Notice"
+
+elseif game.PlaceId == 142823291 then --Murder Mystery 2
+    gametext = "Murder Mystery 2"
+
+elseif game.PlaceId == 443406476 then --Project Lazarus
+    gametext = "Projet Lazarus"
     
-    elseif game.PlaceId == 9217366438 then --Test Game 2
-        gametext = "Test Game 2"
-    
-    elseif game.PlaceId == 2768379856 then --3008
-        gametext = "3008"
-    
-    elseif game.PlaceId == 286090429 then --Arsenal
-        gametext = "Arsenal"
-    
-    elseif game.PlaceId == 4282985734 then --Combat Warriors
-        gametext = "Combat Warriors"
-    
-    elseif game.PlaceId == 4588604953 then --Criminality
-        gametext = "Criminality"
-    
-    elseif game.PlaceId == 2788229376 then --Da Hood
-        gametext = "Da Hood"
-    
-    elseif game.PlaceId == 3625110776 then --Elimination Tower
-        gametext = "Elimination Tower"
-    
-    elseif game.PlaceId == 2577040780 then --Eviction Notice
-        gametext = "Eviction Notice"
-    
-    elseif game.PlaceId == 142823291 then --Murder Mystery 2
-        gametext = "Murder Mystery 2"
-        
-    elseif game.PlaceId == 443406476 then --Project Lazarus
-        gametext = "Projet Lazarus"
-    
-    elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
-        gametext = "The Rake REMASTERED"
-        
-    elseif game.PlaceId == 1689414409 then --Uno
-        gametext = "Uno"
-    
-    else --Universal
-        gametext = "Universal Aimbot & ESP"
-    end
-    script.Parent.Main.GameText.Text = gametext
+elseif game.PlaceId == 2377868063 then --Strucid
+    gametext = "Strucid"
+
+elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+    gametext = "The Rake REMASTERED"
+
+elseif game.PlaceId == 1689414409 then --Uno
+    gametext = "Uno"
+
+else --Universal
+    gametext = "Universal Aimbot & ESP"
 end
-coroutine.wrap(XKUSRL_fake_script)()
-local function BRESF_fake_script() -- KhepronScriptLoader.CopyInvite 
+script.Parent.Main.GameText.Text = gametext
+end
+coroutine.wrap(ZWZYQTR_fake_script)()
+local function KFAFO_fake_script() -- KhepronScriptLoader.CopyInvite 
     local script = Instance.new('LocalScript', KhepronScriptLoader)
 
     function OnClick()
@@ -529,4 +496,4 @@ local function BRESF_fake_script() -- KhepronScriptLoader.CopyInvite
     end
     script.Parent.Main.Info.TopBar.Discord.CopyInvite.MouseButton1Up:Connect(OnClick)
 end
-coroutine.wrap(BRESF_fake_script)()
+coroutine.wrap(KFAFO_fake_script)()
