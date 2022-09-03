@@ -424,7 +424,7 @@ local function QJACO_fake_script() -- KhepronScriptLoader.ExecuteScript
 
     function OnClicked()
         wait(0.8)
-        if game.PlaceId == 2768379856 or 286090429 or 3233893879 or 4282985734 or 4588604953 or 2788229376 or 3625110776 or 2577040780 or 142823291 or 443406476 or 2377868063 or 2413927524 or 1689414409 then
+        if game.PlaceId == 2768379856 or 286090429 or 3233893879 or 4282985734 or 4588604953 or 2788229376 or 3625110776 or 6327462490 or 2577040780 or 142823291 or 443406476 or 2377868063 or 2413927524 or 1689414409 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/".. game.PlaceId ..""))()
         else
             loadstring(game:HttpGet("https://raw.githubusercontent.com/ClownedMind/KhepronScriptLoader/main/scripts/Universal"))()
@@ -462,6 +462,9 @@ elseif game.PlaceId == 2788229376 then --Da Hood
     gametext = "Da Hood"
 
 elseif game.PlaceId == 3625110776 then --Elimination Tower
+    gametext = "Elimination Tower"
+    
+elseif game.PlaceId == 6327462490 then --Elimination Tower
     gametext = "Elimination Tower"
 
 elseif game.PlaceId == 2577040780 then --Eviction Notice
